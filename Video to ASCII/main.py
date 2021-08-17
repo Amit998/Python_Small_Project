@@ -35,7 +35,8 @@ def generate_frame(image,new_width=70):
 
 
 
-image=cv2.imread("D:/study/workplace/project/Flutter Backend Apps/artvana/assets/images/user.jpg")
+image=cv2.imread("D:/study/workplace/project/Flutter Backend Apps/artvana/assets/images/36.jpg")
+image=cv2.resize(image,(200,200))
 image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 cv2.imshow("image",image)
 generate_frame(Image.fromarray(image))

@@ -53,9 +53,9 @@ for i in range(detected_objects.shape[2]):
         lower_right_y=int(detected_objects[0,0,i,6]*height)
 
 
-        prediction_text=f"{classNames[class_index]}:{confidence:2.f}%"
+        prediction_text=f"{classNames[class_index]}:{confidence:.2f}%"
         cv2.rectangle(image,(upper_left_x,upper_left_y),(lower_right_x,lower_right_y),colors[class_index])
-        cv2.putText(image,prediction_text,(upper_left_x,upper_left_y,upper_left_y-15 if upper_left_y > 30 else upper_left_y+15),cv2.FONT_HERSHEY_SIMPLEX,0.6,colors[class_index])
+        cv2.putText(image,prediction_text,(upper_left_x,upper_left_y,upper_left_y-15 if upper_left_y > 30 else upper_left_y+15),cv2.FONT_HERSHEY_SIMPLEX,1,colors[class_index])
 
 
 cv2.imshow("Detected Image",image)
